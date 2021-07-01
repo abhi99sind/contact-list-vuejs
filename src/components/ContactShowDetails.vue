@@ -14,9 +14,9 @@
 
     <footer>
       <h1>Contact</h1>
-      <a href="#" class="contact">Email : {{ singleContact.email }}</a><br>
-      <a href="#" class="contact">Address: {{ singleContact.address }}</a><br>
-      <a href="#" class="contact">Gender: {{ singleContact.gender }}</a><br>
+      <a href="#" class="contact">Email : <strong>{{ singleContact.email }}</strong></a><br>
+      <a href="#" class="contact">Address: <strong>{{ singleContact.address }}</strong></a><br>
+      <a href="#" class="contact">Gender: <strong>{{ singleContact.gender }}</strong></a><br>
     </footer>
   </main>
 </template>
@@ -69,51 +69,21 @@ main {
     width: 100%;
 }
 
-.top-card .menu-icon {
-    position: relative;
-    width: 22px;
-    bottom: 13.7em;
-    left: 1.1em;
-    cursor: pointer;
-}
-
-.top-card .menu-icon .menu {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    margin-bottom: 6px;
-    opacity: .5;
-    transition: .4s;
-}
-
-.top-card .menu-icon .item1 {
-    left: -5px;
-}
-
-.top-card .menu-icon .item2 {
-    left: 5px;
-}
-
-.top-card .menu-icon:hover .menu {
-    left: 0;
-    border-radius: 1px;
-}
 
 .top-card .name {
     width: 50%;
     height: 0;
     text-align: center;
     float: right;
+    color:black;
 }
 
 .top-card .name p {
     position: relative;
     font-size: 50px;
     font-weight: 800;
-    color: #000;
-    opacity: .5;
+    color:white;
+    opacity: 1;
     bottom: 140px;
     line-height: 50px;
     text-align: center;
@@ -144,6 +114,7 @@ h1 {
 .contact{
     color:black;
     text-decoration: none;
+
 }
 footer {
     text-align: center;

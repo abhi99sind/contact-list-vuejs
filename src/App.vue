@@ -1,27 +1,15 @@
 <template>
   <div id="app">
-    <nav class="navbar sticky-top navbar-dark bg-dark">
-    <b-button class="menu-button" v-b-toggle.sidebar-1><b-icon icon="menu-button-wide"></b-icon></b-button>
-    <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar>
-    <a class="navbar-brand">Contact List</a>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    </form>
-    </nav>
-    <contact-side-bar :contacts="contacts" :index="selectedIndex" :hover="hover" @show="dataRecieved($event)"></contact-side-bar>
+    <Header :contacts="contacts" :index="selectedIndex" :hover="hover" @headerClick="dataRecieved($event)"></Header>
+    <div class="sidebar">
+      <contact-side-bar :contacts="contacts" :index="selectedIndex" :hover="hover" @show="dataRecieved($event)"></contact-side-bar>
+    </div>
     <contact-show-details v-if="showDetailsOrNot" :singleContact="singleContact!= null ? singleContact : {name : 'Hello World'}"></contact-show-details>
   </div>
 </template>
 
 <script>
+import Header from './components/Header.vue';
 import ContactSideBar from './components/ContactSideBar.vue';
 import ContactShowDetails from './components/ContactShowDetails.vue';
 export default {
@@ -32,6 +20,7 @@ export default {
   components:{
     ContactSideBar,
     ContactShowDetails,
+    Header,
   },
   data(){
     return{
@@ -82,12 +71,24 @@ body{
   margin: 0;
   font-family: "Lato", sans-serif;
 }
-.menu-button{
-  display: none!important;
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 475px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
 }
-@media screen and (max-width: 600px){
-  .menu-button{
-    display: block!important;
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: none;
   }
+  .sidebar a {float: left;}
 }
 </style>

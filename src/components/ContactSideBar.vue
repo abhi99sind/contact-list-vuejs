@@ -1,11 +1,9 @@
 !<template>
-  <div class="sidebar">
       <div class="container">
         <ul class="cards" :key="contact.uid" v-for="contact in contacts">
             <contact-card :con="contact" :selectedIndex="index" :hoverOrNot="hover" @sendData="$emit('show',$event)"></contact-card>
         </ul>
     </div>
-  </div>
 </template>
 
 <script>
@@ -52,23 +50,4 @@ body {
   text-align: center;
 }
 
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 475px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: scroll;
-}
-
-@media screen and (max-width: 800px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: none;
-  }
-  .sidebar a {float: left;}
-}
 </style>

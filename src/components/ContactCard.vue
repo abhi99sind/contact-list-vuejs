@@ -1,7 +1,7 @@
 <template>
     <a @click="$emit('sendData',con)">
-        <div :class="[backgroundColor,'contact-section']" @mouseover="hover  = !hover" @mouseleave="hover = false">
-            <li>
+        <div class='contact-section' @mouseover="hover  = !hover" @mouseleave="hover = false">
+            <li :class="backgroundColor">
                 <img :src="con.avatar" />
                 <div class="details">
                     <span class="name">{{ con.name }}</span>
