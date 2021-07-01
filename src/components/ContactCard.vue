@@ -123,7 +123,7 @@ export default {
    li {
     display: block;
     width: auto;
-    max-width: 100px;
+    max-width: 450px;
     margin: 30px auto;
   }
    li img,
@@ -151,5 +151,17 @@ export default {
 }
 .name{
     color:black;
+}
+@media screen and (max-width: 925px) {
+  .details {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .details {
+    width: 50%;
+    margin-left: 81px;
+    margin-top: -96px;
+  }
 }
 </style>

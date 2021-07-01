@@ -8,15 +8,15 @@
     </section>
 
     <section class="middle-card">
-      <h1>About</h1>
+      <h2>About</h2>
       <p>{{ singleContact.about }}</p>
     </section>
 
     <footer>
-      <h1>Contact</h1>
-      <a href="#" class="contact">Email : <strong>{{ singleContact.email }}</strong></a><br>
-      <a href="#" class="contact">Address: <strong>{{ singleContact.address }}</strong></a><br>
-      <a href="#" class="contact">Gender: <strong>{{ singleContact.gender }}</strong></a><br>
+      <h2>Contact</h2>
+      <a href="#" class="contact"><strong>Email : </strong> {{ singleContact.email }}</a>
+      <a href="#" class="contact"><strong>Address: </strong>{{ singleContact.address }}</a>
+      <a href="#" class="contact"><strong>Gender: </strong>{{ singleContact.gender }}</a>
     </footer>
   </main>
 </template>
@@ -57,7 +57,7 @@ main {
     color: #000;
     border-radius: 7px;
     box-shadow: -5px -5px 25px rgba(0, 0, 0, 0.705);
-    margin: 50px auto 50px 800px;
+    margin: 50px auto 50px 750px;
 }
 
 .top-card {
@@ -66,6 +66,7 @@ main {
 }
 
 .top-card img {
+    margin-top: 14px;
     width: 100%;
 }
 
@@ -95,7 +96,7 @@ main {
     text-transform: uppercase;
 }
 
-h1 {
+h2 {
     font-size: 20px;
     color: #000;
     font-weight: 600;
@@ -105,43 +106,80 @@ h1 {
 }
 
 .middle-card, footer {
-    margin: 5px 25px;
+    margin: 5px 25px 14px;
 }
 
 .middle-card {
     text-align: justify;
 }
 .contact{
+    display: block;
+    padding-top: 10px;
+    pointer-events: none;
     color:black;
     text-decoration: none;
 
 }
 footer {
-    text-align: center;
+    text-align: left;
 }
 
 
 .content {
   padding: 1px 16px;
 }
-@media screen and (max-width: 550px) {
-  .content {margin-left: 100px !important;}
-}
-@media screen and (max-width: 800px) {
-  .content {margin-left: 250px !important;}
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .content {
-      margin-left: 600px;
+      margin-left: 650px;
+      width: 400px;
+    }
+  .top-card .name p {
+      left: -50px;
+      top: -100px;
+      font-size: 47px;
+      font-weight: 700;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
+  .content {
+      margin-left: 605px;
+      width: 320px;
+    }
+  .top-card .name p {
+      left: -57px;
+      top: -103px;
+      font-size: 44px;
+      font-weight: 650;
+    }
+}
+@media screen and (max-width: 925px) {
+  .content {
+      margin-left: 550px;
+      width: 300px;
+    }
+   .top-card .name p {
+      left: -38px;
+      top: -102px;
+      font-size: 40px;
+      font-weight: 640;
+    }
+}
+@media screen and (max-width: 860px) {
   .content {
       margin-left: 500px;
       width: 300px;
     }
+   .top-card .name p {
+      left: -72px;
+      top: -103px;
+      font-size: 47px;
+      font-weight: 700;
+    }
 }
-
+@media screen and (max-width: 800px) {
+  .content {
+      margin-left: auto;
+    }
+}
 </style>

@@ -91,4 +91,10 @@ body{
   }
   .sidebar a {float: left;}
 }
+
+@media screen and (max-width: 925px) {
+  .sidebar {
+    width: 50%;
+  }
+}
 </style>
