@@ -15,6 +15,7 @@ import ContactShowDetails from './components/ContactShowDetails.vue';
 export default {
   name: 'App',
   mounted(){
+  console.log("hello");
     this.created();
   },
   components:{
